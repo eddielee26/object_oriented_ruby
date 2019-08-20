@@ -10,10 +10,10 @@ class Item
   attr_reader :color, :price, :size
   attr_writer :price
 
-  def initialize(color, price, size)
-    @color = color
-    @price = price
-    @size = size
+  def initialize(input_options)
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @size = input_options[:size]
   end
 
   def color
@@ -38,9 +38,9 @@ class Item
 
 end
 
-item1 = Item.new("blue", 400, "small")
-item2 = Item.new("red", 600, "medium")
-item3 = Item.new("black", 800, "large")
+item1 = Item.new(color: "blue", price: 400, size: "small")
+item2 = Item.new(color: "red", price: 600, size: "medium")
+item3 = Item.new(color: "black", price: 800, size: "large")
 
 puts item1.color
 puts item1.price
