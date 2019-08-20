@@ -16,8 +16,14 @@
 # puts "#{employee2[:first_name]} #{employee2[:last_name]} makes #{employee2[:salary]} a year."
 
 # Represent an employee as a class instance
+
 class Employee
   
+  attr_accessor :first_name, :last_name, :salary, :active #if you want reader/writer for one thing
+  
+  attr_reader :first_name, :last_name, :salary, :active
+  attr_writer :first_name, :last_name, :salary, :active
+
   def initialize(input_first_name, input_last_name, input_salary, input_active)
     @first_name = input_first_name 
     @last_name = input_last_name
@@ -71,3 +77,4 @@ puts employee1.salary
 puts employee1.active
 employee1.active = false
 puts employee1.active
+

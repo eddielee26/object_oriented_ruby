@@ -7,6 +7,9 @@
 
 class Item
 
+  attr_reader :color, :price, :size
+  attr_writer :price
+
   def initialize(color, price, size)
     @color = color
     @price = price
